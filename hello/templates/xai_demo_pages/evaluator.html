@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>Evaluator</title>
+<link rel="stylesheet" href="static/css/explanation_evaluator_style.css" />
+</head>
+
+<header>
+   <div style="color:black; text-align:center; font-size:250%;">Evaluator</div>
+</header>
+
+<body>
+<br /><br />
+  <a href="test.html"><button class="btn" style="position: absolute; left: 10%;">Back</button></a>
+<br /><br />
+
+<div class=form>
+<form id="testForm>">
+
+<img id="questionImg" src="static/img/question1.png" style="height:48%; left: 300;">
+
+<br><br>
+
+<!-- One "tab" for each step in the form: -->
+<div class="tab">Q0: Which explainer corresponds to this evaluator?
+  <p><input type="radio" name="q0" value="no explanation"> Without explanation</p>
+  <p><input type="radio" name="q0" value="attention maps"> Attention maps as explanation</p>
+  <p><input type="radio" name="q0" value="x-tom"> X-ToM</p>
+</div>
+
+<div class="tab">Q1: Can the Machine correctly detect left arm?
+  <p><input type="radio" name="q1" value="a"> Yes</p>
+  <p><input type="radio" name="q1" value="b"> No</p>
+</div>
+
+<div class="tab">Q2: If yes, which body parts are most influential for the machine to detect left arm (select all that apply)?
+  <p><input type="checkbox" name="q2" value="a"> Upper body</p>
+  <p><input type="checkbox" name="q2" value="b"> Torso</p>
+  <p><input type="checkbox" name="q2" value="c"> Left shoulder</p>
+  <p><input type="checkbox" name="q2" value="d"> Left elbow</p>
+</div>
+
+<div class="tab">Q3: If no, incorrect detection of which body part is the main cause for incorrect detection of left arm (select all that apply)?
+  <p><input type="checkbox" name="q3" value="a"> Upper body</p>
+  <p><input type="checkbox" name="q3" value="b"> Left wrist</p>
+  <p><input type="checkbox" name="q3" value="c"> Left leg</p>
+  <p><input type="checkbox" name="q3" value="d"> Neck</p>
+</div>
+
+<div class="tab">Q4: Select the bubbles that are sufficient for the Machine to correctly detect left arm (select all that apply).
+  <p><input type="checkbox" name="q4" value="a"> (a)</p>
+  <p><input type="checkbox" name="q4" value="b"> (b)</p>
+  <p><input type="checkbox" name="q4" value="c"> (c)</p>
+  <p><input type="checkbox" name="q4" value="d"> (d)</p>
+</div>
+
+<div class="tab">Q5: Order the bubbles based on how influential they are at correctly detecting left arm.
+  <p><input type="radio" name="q5" value="a"> (c) > (b) > (d) > (a)</p>
+  <p><input type="radio" name="q5" value="b"> (b) > (c) > (a) > (d)</p>
+  <p><input type="radio" name="q5" value="c"> (b) > (d) > (a) > (c)</p>
+  <p><input type="radio" name="q5" value="d"> (c) > (b) > (a) > (d)</p>
+</div>
+
+<div class="tab">Q6: Select the body parts which you think the Machine can idenitfy correctly (select all that apply).
+  <p><input type="checkbox" name="q6" value="a"> Torso</p>
+  <p><input type="checkbox" name="q6" value="b"> Right arm</p>
+  <p><input type="checkbox" name="q6" value="c"> Right shoulder</p>
+  <p><input type="checkbox" name="q6" value="d"> Left arm</p>
+</div>
+
+<div class="tab">Q7: Select the body parts which you think the Machine will fail idenitfy correctly (select all that apply).
+  <p><input type="checkbox" name="q7" value="a"> Torso</p>
+  <p><input type="checkbox" name="q7" value="b"> Right arm</p>
+  <p><input type="checkbox" name="q7" value="c"> Right shoulder</p>
+  <p><input type="checkbox" name="q7" value="d"> Left arm</p>
+</div>
+
+<div class="tab">Q8: Select the region which the Machine will idenitfy as the left arm.
+  <p><input type="radio" name="q8" value="a"> (a)</p>
+  <p><input type="radio" name="q8" value="b"> (b)</p>
+  <p><input type="radio" name="q8" value="c"> (c)</p>
+  <p><input type="radio" name="q8" value="d"> (d)</p>
+</div>
+
+<div style="overflow:auto;">
+  <div style="float:right;">
+    <button class="btn" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button class="btn" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+</div>
+</form>
+</div>
+
+</body>
+<script type="text/javascript" src="static/js/form.js"></script>
+</html>
